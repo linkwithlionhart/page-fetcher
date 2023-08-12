@@ -52,7 +52,7 @@ function checkInvalidPathAndFetch() {
 // Fetch the content from the given URL and save it to the specified file path
 function fetchAndSave() {
   // Make an HTTP request to the provided URL
-  request(url, (error, body) => {
+  request(url, (error, response, body) => {
     // Edge Case 3: If there's an error (e.g., invalid URL), show an error message
     if (error) {
       console.error("Failed to fetch the URL. Please ensure it's valid:", error.message);
